@@ -1,0 +1,55 @@
+.book-page {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.book-page:first-of-type {
+  border-right: none;
+}
+
+@media screen and (max-width: 767px) {
+  .book-page {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    margin-bottom: 20px;
+  }
+}
+
+.prev-page-btn, .next-page-btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.prev-page-btn {
+  left: -30px;
+}
+
+.next-page-btn {
+  right: -30px;
+}
+
+@media screen and (max-width: 767px) {
+  .prev-page-btn, .next-page-btn {
+    display: none;
+  }
+}
+
+.epub-view {
+  overflow: scroll;
+  height: 50px
+}

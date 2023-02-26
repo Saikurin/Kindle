@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kindle-6fc0a": {
+      "hosting": {
+        "mrec_front": [
+          "kindle-6fc0a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kindle-6fc0a"
+  }
+}

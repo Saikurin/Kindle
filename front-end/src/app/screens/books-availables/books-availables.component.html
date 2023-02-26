@@ -1,0 +1,6 @@
+<div class="row mt-3">
+  <div class="col-md-12">
+    <ngb-pagination [maxSize]=45 [collectionSize]="books.length" [(page)]="page" [pageSize]="pageSize"></ngb-pagination>
+  </div>
+  <app-book class="col-md-3 mb-3" [book]="book" *ngFor="let book of books  | slice: (page-1) * pageSize : page * pageSize"></app-book>
+</div>

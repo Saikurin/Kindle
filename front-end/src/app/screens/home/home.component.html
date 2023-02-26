@@ -1,0 +1,20 @@
+<div class="row align-items-center" style="height: 100vh;">
+  <div class="mx-auto col-10 col-md-8 col-lg-6">
+
+    <nav ngbNav #nav="ngbNav" class="nav-tabs">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Recherche simple</a>
+        <ng-template ngbNavContent>
+          <app-form></app-form>
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Recherche avancée</a>
+        <ng-template ngbNavContent>
+          <app-form-regexp></app-form-regexp>
+        </ng-template>
+      </ng-container>
+    </nav>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  </div>
+</div>

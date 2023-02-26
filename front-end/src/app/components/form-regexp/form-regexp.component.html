@@ -1,0 +1,21 @@
+<!-- Input fields -->
+<div class="form-group">
+  <label for="word" class="mb-3 fw-bold text-white">Quel regexp souhaitez-vous rechercher dans Kindle ?</label>
+  <input
+    type="text"
+    class="form-control"
+    id="word"
+    placeholder="[A-Z]+"
+    (keyup.enter)="search({$event : $event})"
+  />
+</div>
+<div class="books row mt-3" *ngIf="books">
+  <div class="card" *ngFor="let book of books">
+    <div class="card-body">
+      <h5 class="card-title">{{book.metadata.title}}</h5>
+      <ul *ngFor="let author of book.metadata.authors">
+        <li>{{author.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

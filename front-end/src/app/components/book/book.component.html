@@ -1,0 +1,10 @@
+<div class="bg-white p-5 rounded-lg shadow shadow-lg">
+  <p class="text-right badge" [ngClass]="!book?.alreadyIndex ? 'bg-warning' : 'bg-success'">{{!book?.alreadyIndex ? 'En cours d\'indexation' : 'Indexé'}}</p>
+  <h1 class="h6 text-uppercase font-weight-bold mb-4">{{book?.metadata?.title}}</h1>
+  <p class="text-small fst-italic" *ngFor="let author of book?.metadata?.authors">{{author.name}}</p>
+
+  <div class="custom-separator my-4 mx-auto bg-primary"></div>
+  <a href="" [routerLink]="['/reader', book?.gut_id]" class="btn btn-primary p-2 shadow d-block mb-2" *ngIf="urls['application/epub+zip']">Lire depuis Kindle</a>
+  <a [href]="urls['text/html']" target="_blank" class="btn btn-primary p-2 shadow d-block mb-2" *ngIf="urls['text/html']">Lire le livre en ligne</a>
+  <a [href]="urls['text/plain']" target="_blank" class="btn btn-primary p-2 shadow d-block mb-2" *ngIf="urls['text/plain']">Voir la version texte brut</a>
+</div>
